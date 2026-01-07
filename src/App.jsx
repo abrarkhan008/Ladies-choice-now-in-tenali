@@ -620,19 +620,31 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 to-pink-100">
       {/* Navbar */}
+      {/* Navbar */}
       <nav className="bg-white shadow-md fixed top-0 w-full z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <span className="text-xl md:text-2xl font-bold">
-                <span className="text-pink-600">LADIES</span>
-                <span className="text-purple-600"> Choice Now In</span>
-                <span className="text-gray-600 text-sm md:text-base ml-2">
-                  Tenali
-                </span>
-              </span>
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-20 md:h-24">
+            {/* Logo */}
+            <div className="flex items-center gap-3 flex-shrink-0">
+              <img
+                src="/logo.png"
+                alt="Ladies Choice Logo"
+                className="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40 object-contain"
+                onError={(e) => {
+                  e.target.style.display = "none";
+                }}
+              />
+              {/* <div className="hidden sm:block">
+                <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-tight">
+                  <span className="text-pink-600">LADIES</span>
+                  <span className="text-purple-600"> Choice</span>
+                  <br />
+                  <span className="text-gray-600 text-xs sm:text-sm md:text-base">
+                    Now In Tenali
+                  </span>
+                </h1>
+              </div> */}
             </div>
-
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
               <button
@@ -893,10 +905,10 @@ function App() {
 
 function HomePage({ setSelectedCategory, setCurrentPage }) {
   const categories = [
-    { key: "combo", name: "Combo Deal's", image: "/categories/combo.png" },
-    { key: "facial", name: "Facials", image: "/categories/facial.png" },
+    { key: "combo", name: "Try The COMBO", image: "/categories/combo.png" },
     { key: "makeup", name: "Makeup's", image: "/categories/makeup.png" },
     { key: "dtan", name: "D-tan", image: "/categories/dtan.png" },
+    { key: "facial", name: "Facials", image: "/categories/facial.png" },
     { key: "manipedi", name: "Mani-Pedi", image: "/categories/manipedi.png" },
     { key: "waxing", name: "Waxing", image: "/categories/waxing.png" },
     { key: "threading", name: "Threading", image: "/categories/threading.png" },
@@ -915,24 +927,19 @@ function HomePage({ setSelectedCategory, setCurrentPage }) {
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            DoorStep Salon for Women
+            Doorstep Salon for Women
           </h1>
-          <p className="text-xl md:text-2xl mb-4">
-            GlowCare Live In{" "}
-            <span className="bg-white text-blue-600 px-3 py-1 rounded">14</span>{" "}
-            Cities
+
+          <p className="text-2xl md:text-3xl font-semibold mb-4">
+            Ladies’ Choice — Now in{" "}
+            <span className="bg-white text-blue-600 px-3 py-1 rounded">
+              Tenali
+            </span>
           </p>
-          <p className="text-lg mb-8">Book Now & Pay After Service</p>
-          <div className="flex flex-wrap justify-center gap-2 text-sm">
-            {cities.map((city) => (
-              <span
-                key={city}
-                className="bg-white bg-opacity-20 px-3 py-1 rounded"
-              >
-                {city}
-              </span>
-            ))}
-          </div>
+
+          <p className="text-lg md:text-xl mb-8 opacity-90">
+            Book Now & Pay After Service
+          </p>
         </div>
       </div>
 
@@ -963,7 +970,7 @@ function HomePage({ setSelectedCategory, setCurrentPage }) {
 function ServicesPage({ category, addToCart, setCurrentPage }) {
   const services = servicesData[category] || [];
   const categoryNames = {
-    combo: "Combo Deals",
+    combo: "TRY the combo",
     facial: "Facial Services",
     makeup: "Makeup Services",
     dtan: "De-Tan Services",
