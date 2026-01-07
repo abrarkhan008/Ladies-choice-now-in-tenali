@@ -25,7 +25,7 @@ const servicesData = {
       id: "c1",
       name: "Super Combo (6 Services)",
       price: 1605,
-      image: "/combo/super-combo.png",
+      image: "/combo/1.png",
       services: [
         "Eyebrows Threading",
         "De-Tan (Face & Neck)",
@@ -39,7 +39,7 @@ const servicesData = {
       id: "c2",
       name: "Freedom Combo (7 Services)",
       price: 1805,
-      image: "/combo/freedom-combo.png",
+      image: "/combo/2.png",
       services: [
         "Diamond Facial",
         "De-Tan (Face & Neck)",
@@ -53,7 +53,7 @@ const servicesData = {
       id: "c3",
       name: "Signature Combo (7 Services)",
       price: 2500,
-      image: "/combo/signature-combo.png",
+      image: "/combo/3.png",
       services: [
         "Eyebrows Threading",
         "Korean Facial",
@@ -301,14 +301,14 @@ const servicesData = {
       id: "m1",
       name: "Hair Styling",
       price: 1050,
-      image: "/makeup/hair-styling.png",
+      image: "/makeup/1.png",
       services: ["Price depends on hair length", "Starting from ₹1050"],
     },
     {
       id: "m2",
       name: "Bridal Makeup",
 
-      image: "/makeup/bridal-makeup.png",
+      image: "/makeup/2.png",
       services: [
         "3 Sarees",
         "Hair Style Included",
@@ -319,14 +319,14 @@ const servicesData = {
       id: "m3",
       name: "Saree Draping",
       price: 700,
-      image: "/makeup/saree-draping.png",
+      image: "/makeup/3.png",
       services: ["Traditional & Modern styles"],
     },
     {
       id: "m4",
       name: "Light Makeup Only",
-      price: 800,
-      image: "/makeup/light-makeup.png",
+      price: 1500,
+      image: "/makeup/4.png",
       services: ["Natural look", "Suitable for parties & functions"],
     },
   ],
@@ -653,12 +653,12 @@ function App() {
               >
                 <HomeIcon size={18} /> Home
               </button>
-              <button
+              {/* <button
                 onClick={() => setCurrentPage("about")}
                 className="text-gray-700 hover:text-blue-600 flex items-center gap-2"
               >
                 <Info size={18} /> About
-              </button>
+              </button> */}
               <button
                 onClick={() => setCurrentPage("terms")}
                 className="text-gray-700 hover:text-blue-600 flex items-center gap-2"
@@ -1251,142 +1251,153 @@ Pay After Service
   );
 }
 
-function AboutPage() {
-  return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">About GlowCare</h1>
+// function AboutPage() {
+//   return (
+//     <div className="max-w-4xl mx-auto px-4 py-12">
+//       <h1 className="text-4xl font-bold mb-8">About GlowCare</h1>
 
-      <div className="bg-gradient-to-br from-pink-50 to-white hover:shadow-2xl rounded-xl shadow-lg p-8 mb-8">
-        <h2 className="text-2xl font-bold mb-4">Who we are?</h2>
-        <p className="text-gray-700 mb-6">
-          Glowcare is a tech platform that connects skilled local beauticians
-          with customers to provide professional beauty services in the comfort
-          of their homes. Founded in 2018.
-        </p>
+//       <div className="bg-gradient-to-br from-pink-50 to-white hover:shadow-2xl rounded-xl shadow-lg p-8 mb-8">
+//         <h2 className="text-2xl font-bold mb-4">Who we are?</h2>
+//         <p className="text-gray-700 mb-6">
+//           Glowcare is a tech platform that connects skilled local beauticians
+//           with customers to provide professional beauty services in the comfort
+//           of their homes. Founded in 2018.
+//         </p>
 
-        <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
-        <p className="text-gray-700 mb-6">
-          Our mission is to bridge the gap between individuals seeking quality
-          beauty services and experienced beauticians in their city's.
-        </p>
+//         <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
+//         <p className="text-gray-700 mb-6">
+//           Our mission is to bridge the gap between individuals seeking quality
+//           beauty services and experienced beauticians in their city's.
+//         </p>
 
-        <h2 className="text-2xl font-bold mb-4">Our Leadership Team</h2>
-        <div className="grid md:grid-cols-2 gap-4">
-          <div className="bg-blue-50 p-4 rounded-lg">
-            <h3 className="font-bold text-lg">Krishna</h3>
-            <p className="text-gray-600">CEO & Founder</p>
-          </div>
-          <div className="bg-purple-50 p-4 rounded-lg">
-            <h3 className="font-bold text-lg">Sowmya</h3>
-            <p className="text-gray-600">Co-Founder</p>
-          </div>
-        </div>
-      </div>
+//         <h2 className="text-2xl font-bold mb-4">Our Leadership Team</h2>
+//         <div className="grid md:grid-cols-2 gap-4">
+//           <div className="bg-blue-50 p-4 rounded-lg">
+//             <h3 className="font-bold text-lg">Krishna</h3>
+//             <p className="text-gray-600">CEO & Founder</p>
+//           </div>
+//           <div className="bg-purple-50 p-4 rounded-lg">
+//             <h3 className="font-bold text-lg">Sowmya</h3>
+//             <p className="text-gray-600">Co-Founder</p>
+//           </div>
+//         </div>
+//       </div>
 
-      <div className="grid md:grid-cols-3 gap-6">
-        <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-xl p-8 text-center">
-          <div className="text-5xl font-bold mb-2">14</div>
-          <div className="text-xl">Cities</div>
-        </div>
-        <div className="bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-xl p-8 text-center">
-          <div className="text-5xl font-bold mb-2">200+</div>
-          <div className="text-xl">Beauticians</div>
-        </div>
-        <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-xl p-8 text-center">
-          <div className="text-5xl font-bold mb-2">45,000+</div>
-          <div className="text-xl">Bookings Completed</div>
-        </div>
-      </div>
+//       <div className="grid md:grid-cols-3 gap-6">
+//         <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-xl p-8 text-center">
+//           <div className="text-5xl font-bold mb-2">14</div>
+//           <div className="text-xl">Cities</div>
+//         </div>
+//         <div className="bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-xl p-8 text-center">
+//           <div className="text-5xl font-bold mb-2">200+</div>
+//           <div className="text-xl">Beauticians</div>
+//         </div>
+//         <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-xl p-8 text-center">
+//           <div className="text-5xl font-bold mb-2">45,000+</div>
+//           <div className="text-xl">Bookings Completed</div>
+//         </div>
+//       </div>
 
-      <div className="mt-8 bg-gradient-to-br from-pink-50 to-white hover:shadow-2xl rounded-xl shadow-lg p-8">
-        <h2 className="text-2xl font-bold mb-4">We Are Live In</h2>
-        <div className="flex flex-wrap gap-3">
-          {cities.map((city) => (
-            <span
-              key={city}
-              className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium"
-            >
-              {city}
-            </span>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
+//       <div className="mt-8 bg-gradient-to-br from-pink-50 to-white hover:shadow-2xl rounded-xl shadow-lg p-8">
+//         <h2 className="text-2xl font-bold mb-4">We Are Live In</h2>
+//         <div className="flex flex-wrap gap-3">
+//           {cities.map((city) => (
+//             <span
+//               key={city}
+//               className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium"
+//             >
+//               {city}
+//             </span>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 
 function TermsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">Terms & Conditions</h1>
+      <h1 className="text-4xl font-bold mb-8">
+        Terms & Conditions – Ladies Choice
+      </h1>
 
       <div className="bg-white rounded-xl shadow-lg p-8 space-y-6 text-gray-700">
+        {/* 1 */}
         <div>
           <h2 className="text-2xl font-bold mb-3">1. Platform Purpose</h2>
           <p>
-            GlowCare is an online platform that connects customers with
-            independent local beauticians who offer salon services at home.
-            GlowCare acts solely as a facilitator and does not provide any salon
-            services itself.
+            Ladies Choice is an online facilitation platform that connects
+            customers with independent, local beauticians who provide beauty and
+            salon services at the customer’s home. Ladies Choice does not itself
+            provide any beauty or salon services and acts only as a connector
+            between customers and service professionals.
           </p>
         </div>
 
+        {/* 2 */}
         <div>
           <h2 className="text-2xl font-bold mb-3">
-            2. Independent Contractors
+            2. Independent Service Providers
           </h2>
           <ul className="list-disc pl-6 space-y-2">
             <li>
-              All beauticians on GlowCare are independent contractors and not
-              employees or agents of GlowCare.
+              All beauticians listed on Ladies Choice operate as{" "}
+              <strong>independent service providers</strong> and are not
+              employees, partners, agents, or representatives of Ladies Choice.
             </li>
             <li>
-              GlowCare does not control or supervise the beauticians beyond the
-              initial selection and training process.
-            </li>
-            <li>
-              Customers acknowledge that GlowCare is not responsible for any
-              actions, misconduct, or negligence by the beauticians.
+              Ladies Choice does not control or supervise beauticians during
+              service delivery beyond initial screening and training. Customers
+              acknowledge that Ladies Choice is not responsible for the conduct,
+              actions, negligence, or performance of any beautician.
             </li>
           </ul>
-          <h3 className="font-bold mt-4 mb-2">Beautician Selection Process:</h3>
+
+          <h3 className="font-bold mt-4 mb-2">
+            Beautician Selection & Training
+          </h3>
           <ul className="list-disc pl-6 space-y-2">
             <li>
-              Every beautician undergoes a two-step demonstration process to
-              assess expertise, techniques, and service quality.
+              Each beautician completes a two-step demonstration process to
+              evaluate skills, techniques, and service standards.
             </li>
             <li>
-              Selected beauticians receive one month of additional industry
-              training before being listed on the platform.
+              Selected beauticians undergo one month of additional professional
+              industry training before onboarding.
             </li>
             <li>
-              GlowCare ensures beauticians are skilled in various services,
-              including haircare, skincare, nails, and more.
+              Beauticians are assessed for proficiency in hair care, skin care,
+              nail services, and related beauty treatments.
             </li>
           </ul>
         </div>
 
+        {/* 3 */}
         <div>
           <h2 className="text-2xl font-bold mb-3">
             3. Account & Booking Process
           </h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>No account creation is required to use GlowCare services.</li>
             <li>
-              Customers can book services by selecting the desired service,
-              date, and time on the platform.
+              No account creation is required to use Ladies Choice services.
             </li>
             <li>
-              GlowCare facilitates communication between customers and
+              Customers can book services by selecting the desired service,
+              preferred date, and time on the platform.
+            </li>
+            <li>
+              Ladies Choice facilitates communication between customers and
               beauticians but does not guarantee availability.
             </li>
             <li>
-              All service prices include taxes, and the minimum booking amount
-              is ₹800.
+              All service prices are inclusive of applicable taxes, and the
+              minimum booking value is ₹800.
             </li>
           </ul>
         </div>
 
+        {/* 4 */}
         <div>
           <h2 className="text-2xl font-bold mb-3">
             4. Customer Responsibilities
@@ -1395,134 +1406,141 @@ function TermsPage() {
             <div>
               <h3 className="font-bold">Product Verification:</h3>
               <p>
-                Customers should carefully check the expiry date of products &
-                tools before the service begins. GlowCare is not responsible for
-                product-related issues.
+                Customers must verify the expiry dates and condition of products
+                and tools before the service begins. Ladies Choice shall not be
+                responsible for product-related issues.
               </p>
             </div>
+
             <div>
               <h3 className="font-bold">Skin Sensitivity & Reactions:</h3>
               <p>
-                Customers should inform the beautician of any known allergies or
-                skin conditions before the service. If any skin reaction occurs
-                after the service, the customer must consult a doctor
-                immediately. GlowCare is not responsible for any allergic
-                reactions.
+                Customers must inform the beautician of any allergies or skin
+                conditions prior to the service. In case of any reaction,
+                customers should seek immediate medical attention. Ladies Choice
+                bears no liability for allergic or medical reactions.
               </p>
             </div>
+
             <div>
               <h3 className="font-bold">Payment Terms:</h3>
               <p>
-                No advance payment is collected by GlowCare. Customers must pay
-                the beautician directly after the service is completed. GlowCare
-                is not responsible for payment disputes between customers and
-                beauticians.
+                No advance payment is collected by Ladies Choice. Payments must
+                be made directly to the beautician after service completion.
+                Ladies Choice is not responsible for payment disputes.
               </p>
             </div>
+
             <div>
-              <h3 className="font-bold">Liability for Personal Belongings:</h3>
+              <h3 className="font-bold">Personal Belongings:</h3>
               <p>
-                Customers should store valuable items (gold jewelry, cash,
-                electronics, etc.) in a secure place before the service.
-                GlowCare is not responsible for any theft, damage, or loss of
-                personal belongings.
+                Customers are advised to secure valuable items before the
+                service. Ladies Choice shall not be liable for any loss, theft,
+                or damage to personal belongings.
               </p>
             </div>
           </div>
         </div>
 
+        {/* 5 */}
         <div>
           <h2 className="text-2xl font-bold mb-3">
             5. Beautician Responsibilities
           </h2>
           <ul className="list-disc pl-6 space-y-2">
             <li>
-              <strong>Service Quality & Conduct:</strong> Beauticians must
-              provide services professionally, maintaining hygiene and following
-              industry best practices.
+              <strong>Professional Conduct:</strong> Beauticians must maintain
+              hygiene, professionalism, and industry standards.
             </li>
             <li>
-              <strong>Compliance with Laws:</strong> Beauticians must ensure
-              their services comply with all local laws and regulations.
+              <strong>Legal Compliance:</strong> Beauticians must comply with
+              all applicable local laws and regulations.
             </li>
             <li>
-              <strong>Liability for Loss or Damage:</strong> Beauticians are
-              fully responsible for any loss, theft, or damage caused during
-              their service.
+              <strong>Liability:</strong> Beauticians are solely responsible for
+              any loss, damage, or injury caused during service delivery.
             </li>
             <li>
-              <strong>Timeliness:</strong> Beauticians must arrive on time for
-              scheduled appointments. Frequent delays or cancellations may
+              <strong>Punctuality:</strong> Repeated delays or cancellations may
               result in removal from the platform.
             </li>
           </ul>
         </div>
 
+        {/* 6 */}
+
         <div>
           <h2 className="text-2xl font-bold mb-3">6. Prohibited Services</h2>
-          <p>Beauticians must not provide services that:</p>
-          <ul className="list-disc pl-6 space-y-2 mt-2">
-            <li>Violate local health & safety laws.</li>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Services that violate local health or safety regulations.</li>
             <li>
-              Include medical procedures such as Botox, laser treatments, or
-              invasive treatments.
+              Medical or invasive procedures including Botox, fillers, laser
+              treatments, or similar services.
             </li>
-            <li>Are explicitly banned by GlowCare policies.</li>
+            <li>
+              Services restricted or prohibited by Ladies Choice policies.
+            </li>
           </ul>
         </div>
 
+        {/* 7 */}
         <div>
           <h2 className="text-2xl font-bold mb-3">
-            7. No Warranties & Limited Liability
+            7. No Warranties & Limitation of Liability
           </h2>
           <div className="space-y-3">
             <div>
               <h3 className="font-bold">Platform Availability:</h3>
               <p>
-                GlowCare provides services "as is" and "as available". We do not
-                guarantee uninterrupted service or that the platform will always
-                be error-free.
+                The platform is provided on an “as is” and “as available” basis.
+                Ladies Choice does not guarantee uninterrupted or error-free
+                access.
               </p>
             </div>
+
             <div>
-              <h3 className="font-bold">Service Quality Disclaimer:</h3>
+              <h3 className="font-bold">Service Outcome Disclaimer:</h3>
               <p>
-                GlowCare does not guarantee results from beauticians. Customers
-                acknowledge that outcomes may vary depending on their hair,
-                skin, and other factors.
+                Ladies Choice does not guarantee specific results. Outcomes may
+                vary based on individual hair, skin, and personal factors.
               </p>
             </div>
+
             <div>
               <h3 className="font-bold">Limitation of Liability:</h3>
               <p>
-                GlowCare is not liable for any injury, property damage, allergic
-                reactions, or financial losses resulting from the services.
-                Under no circumstances will GlowCare be responsible for
-                indirect, incidental, or consequential damages.
+                Ladies Choice shall not be liable for any injury, allergic
+                reaction, property damage, or financial loss arising from
+                services. Indirect or consequential damages are expressly
+                excluded.
               </p>
             </div>
           </div>
         </div>
 
+        {/* 8 */}
         <div>
           <h2 className="text-2xl font-bold mb-3">
             8. Refund & Complaint Policy
           </h2>
           <p>
-            <strong>No Refunds:</strong> GlowCare does not process refunds for
-            services rendered by beauticians.
+            <strong>No Refunds:</strong> Ladies Choice does not issue refunds
+            for services rendered by beauticians.
           </p>
         </div>
 
+        {/* Acceptance */}
         <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600 mt-8">
           <p className="font-bold">
-            By using the GlowCare platform, you confirm that you have read,
-            understood, and agree to these Terms & Conditions.
+            By using the Ladies Choice platform, you acknowledge that you have
+            read, understood, and agreed to these Terms & Conditions.
           </p>
         </div>
       </div>
     </div>
   );
 }
+
+
 
 export default App;
